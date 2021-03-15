@@ -11,18 +11,23 @@ class HomeController extends Controller
      *
      * @return void
      */
-    //   public function __construct()
-    //  {
-    //      $this->middleware('auth');
-    //  }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    public function index()
+    {
+        $user = Auth::user();
+        return view('home', compact('user'));
+    }
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
-    }
+    // public function index()
+    // {
+    //     return view('home');
+    // }
 }
