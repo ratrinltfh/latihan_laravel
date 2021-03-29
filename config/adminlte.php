@@ -232,7 +232,13 @@ return [
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'can'  => 'isAdmin',
+        ],
+        [
+            'text' => 'Buku',
+            'url'  => 'admin/books',
+            'icons'=> 'fas fa-fw fa-book',
+            'can'  => 'isAdmin',
         ],
         [
             'text'        => 'pages',
