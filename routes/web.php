@@ -39,3 +39,8 @@ Route::get('admin/books', [App\Http\Controllers\AdminController::class, 'books']
 Route::post('admin/books', [App\Http\Controllers\AdminController::class, 'submit_book'])
     ->name('admin.book.submit')
     ->middleware('is_admin');
+
+    //Mengubah Data
+Route::patch('admin/books/update', [App\Http\Controllers\AdminController::class, 'update_book'])
+    ->name('admin.book.update')
+    ->middleware('is_admin');
